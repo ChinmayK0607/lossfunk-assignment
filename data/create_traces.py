@@ -193,6 +193,17 @@ for idx, row in enumerate(dataset):
 
 # One last write in case the last loop did not hit a 5-step boundary
 df_correct.to_csv("reasoning_dataset.csv", index=False)
+from datasets import Dataset
+import pandas as pd
+
+# # Load your CSV
+df = pd.read_csv("reasoning_dataset.csv")
+
+# # Convert to HF dataset
+dataset = Dataset.from_pandas(df)
+
+# # Push to the Hub
+dataset.push_to_hub("CK0607/gsm8k-r1-llama70b")
 with open("checkpoint.txt", "w") as cf:
     cf.write(str(idx))
 print(f"\nDone. Final CSV written with {len(df_correct)} rows. Last processed index = {idx}.")
