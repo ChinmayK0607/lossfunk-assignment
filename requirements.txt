@@ -1,0 +1,10 @@
+torch
+unsloth
+vllm 
+pandas
+datasets
+huggingface-hub
+sentence-transformers
+modal 
+groq
+trl
