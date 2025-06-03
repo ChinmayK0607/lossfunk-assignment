@@ -38,8 +38,8 @@ def run_train_push():
     from trl import GRPOConfig, GRPOTrainer
     import wandb
     # Retrieve HF token (hard-coded or via Secret)
-    hf_token = "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"
-    wandb.login(key = "702c80eb1559b9d775b36ee98b23300b6863bf09")
+    hf_token = ""
+    wandb.login(key = "")
     # ─── Model + LoRA setup ───────────────────────────────────────────────
     max_seq_length = 2048
     lora_rank = 32
