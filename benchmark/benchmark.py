@@ -1,17 +1,5 @@
 #!/usr/bin/env python
 """
-benchmark_qwen_vllm_modal.py
-
-Benchmarks **CK0607/unsloth-trained-qwen-hard-rewards-250** with **vLLM**
-(not Unsloth) on the first *100* reproducible samples (seed = 42) of
-**CK0607/gsm8k-1000-extra** and stores detailed results in a CSV.
-
-Columns:
-    question, response, model_answer, correct_answer, verdict
-
-Run on Modal with:
-
-    modal run benchmark_qwen_vllm_modal.py
 """
 
 # ──────────────────────────────────────────────────────────────
