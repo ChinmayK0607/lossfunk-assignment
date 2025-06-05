@@ -11,7 +11,7 @@ Environment: Recommended to use a linux environment. I have used lightning.ai fo
 1. Clone the repo 
 2. `pip install uv`
 3. `uv pip install -r requirements.txt`
-4. Run modal setup (docs)[https://modal.com/docs/guide]
+4. Run modal setup [docs](https://modal.com/docs/guide)
 
 This will create a modal.toml that will contain your modal secrets.
 
