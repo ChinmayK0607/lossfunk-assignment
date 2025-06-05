@@ -7,19 +7,21 @@ Disclaimer: Since I was constantly iterating and updating the experiments, there
 
 Environment: Recommended to use a linux environment. I have used lightning.ai for renting VMs for both ease of use and smooth operation. 
 
+
+**Note: Please check for all environment names and variables before running the scripts**
 ## Setup
 1. Clone the repo 
 2. `pip install uv`
 3. `uv pip install -r requirements.txt`
 4. Run `modal setup`. reference -> [docs](https://modal.com/docs/guide)
 
-This will create a modal.toml that will contain your modal secrets.
+This will create a .modal.toml that will contain your modal secrets.
 
 ## Use of scripts
 
 
 ### For Data preparation: 
-That should be fine
+
 1. `cd data`
 2. run the scripts with the command `python script_name.py`
    
@@ -38,8 +40,7 @@ Please beware of model names and other variable names that you have to set befor
 Similar to earlier, check for local variables like Groq Api keys that need to be set so as to have a seamless experience. 
 1. `cd benchmarks`
 2. For normal benchmarking use `modal run script_name.py` (Beware of model names that you set to benchmark the scripts as well as then names of the final csvs)
-3. For llm as a judge benchmarks, use `python script_name.py <file_path_here>`
-4. For accuracy, if testing normal accuracy using `accuracy.py`, then use `python accuracy.py <file_path_here>`
-5. Else please use `python passat8accuracy.py --base_dir <directory_path_here>` 
+3. For accuracy, if testing normal accuracy using `accuracy.py`, then use `python accuracy.py <file_path_here>`
+4. Else please use `python passat8accuracy.py --base_dir <directory_path_here>` 
 
 
