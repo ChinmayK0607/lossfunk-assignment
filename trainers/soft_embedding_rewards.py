@@ -235,8 +235,8 @@ Respond in the following format:
             xmlcount_reward_func,
             soft_format_reward_func,
             strict_format_reward_func,
-            # similarity_reward_func,
-            perplexity_reward_func,      # ← ONLY soft reward now
+            similarity_reward_func,
+            #perplexity_reward_func,      # ← ONLY soft reward now
         ],
         args             = training_args,
         train_dataset    = dataset,
