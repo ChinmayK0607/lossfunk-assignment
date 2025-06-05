@@ -15,9 +15,9 @@ import torch.nn.functional as F
 from functools import partial
 
 # ─────────────── 0.  CONSTANTS / TOKENS ───────────────
-hf_token   = "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"
-HF_REPO_ID = "CK0607/unsloth-trained-qwen-ce-perplexity"   # artefact repo for CSV/TXT
-WANDB_KEY  = "702c80eb1559b9d775b36ee98b23300b6863bf09"
+hf_token   = "hf_token_here"
+HF_REPO_ID = "repo_name_here"   # artefact repo for CSV/TXT
+WANDB_KEY  = "wandb_api_key_here"
 
 GPU_TYPE   = "A100"
 MAX_SEQ    = 512
@@ -235,7 +235,7 @@ def run_train_push():
     model.save_lora("grpo_saved_lora")
     model.save_pretrained_merged("model", tok, save_method="merged_16bit")
     model.push_to_hub_merged(
-        "CK0607/llama3.1-8b-sonnet-pplx-50",
+        "username/model_id",
         tok,
         save_method="merged_16bit",
         token=hf_token,
