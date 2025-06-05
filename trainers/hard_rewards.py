@@ -38,10 +38,10 @@ def run_train_push():
     from trl import GRPOConfig, GRPOTrainer
     import wandb
     # Retrieve HF token (hard-coded or via Secret)
-    hf_token = ""
-    wandb.login(key = "")
+    hf_token = "hf_token_here"
+    wandb.login(key = "wandb_api_key_here")
     # ─── Model + LoRA setup ───────────────────────────────────────────────
-    max_seq_length = 2048
+    max_seq_length = 512
     lora_rank = 32
 
     model, tokenizer = FastLanguageModel.from_pretrained(
@@ -193,7 +193,7 @@ Respond in the following format:
         "model", tokenizer, save_method="merged_16bit"
     )
     model.push_to_hub_merged(
-        "CK0607/unsloth-trained-qwen-hard-rewards-250",
+        "model_name_here",
         tokenizer,
         save_method="merged_16bit",
         token=hf_token,
