@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
-benchmark_qwen_vllm_modal_passat8.py
+
 ====================================
 
-• Benchmarks **mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated** with vLLM.
+
 • Computes *pass @ 8* accuracy on CK0607/gsm8k-1000-extra.
 • Produces two CSVs – one for the full 1 000-row split, one for the first 100 rows.
 • Outputs land in passat8/1000/ and passat8/100/.
@@ -17,7 +17,7 @@ Columns (one row per **question**):
 
 Run on Modal with:
 
-    modal run benchmark_qwen_vllm_modal_passat8.py
+    modal run passat8.py
 """
 # ──────────────────────────────────────────────────────────────
 # 0. Imports
