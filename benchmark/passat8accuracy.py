@@ -3,10 +3,7 @@
 compute_passat8_accuracy_all.py
 ================================
 
-Walks through passat8/1000/ and passat8/100/ (or any custom base_dir) and
-reports accuracy for *every* CSV it finds.
 
-Accuracy =  (# rows with verdict == "correct") / (total rows)  × 100 %
 
 Usage
 -----
