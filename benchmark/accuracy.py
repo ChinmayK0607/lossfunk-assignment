@@ -3,17 +3,19 @@
 calc_accuracy.py
 
 Compute accuracy from the CSV produced by the vLLM benchmark.
-Simply edit CSV_PATH below with your file’s name.
+Usage:
+    python calc_accuracy.py path_to_csv_file.csv
 """
 
 import pandas as pd
-
-# ─── 1.  Edit this line only ──────────────────────────────────────────────
-CSV_PATH = ""      # ← put your CSV file here
-# ─────────────────────────────────────────────────────────────────────────
+import argparse
 
 def main():
-    df = pd.read_csv(CSV_PATH)
+    parser = argparse.ArgumentParser(description="Compute accuracy from vLLM benchmark CSV.")
+    parser.add_argument("csv_path", type=str, help="Path to the CSV file.")
+    args = parser.parse_args()
+
+    df = pd.read_csv(args.csv_path)
 
     # preferred: rely on the verdict column
     if "verdict" in df.columns:
