@@ -1,11 +1,5 @@
 #!/usr/bin/env python
-"""
-calc_accuracy.py
 
-Compute accuracy from the CSV produced by the vLLM benchmark.
-Usage:
-    python calc_accuracy.py path_to_csv_file.csv
-"""
 
 import pandas as pd
 import argparse
