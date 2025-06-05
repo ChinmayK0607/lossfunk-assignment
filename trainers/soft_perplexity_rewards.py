@@ -38,8 +38,8 @@ def run_train_push():
     from sentence_transformers import SentenceTransformer, util
     import torch.nn.functional as F
     
-    hf_token = "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"
-    wandb.login(key="702c80eb1559b9d775b36ee98b23300b6863bf09")
+    hf_token = "hf_token_here"
+    wandb.login(key="wandb_api_key_here")
 
     # — Model + LoRA set-up (identical) —
     max_seq_length = 2048
@@ -283,7 +283,7 @@ Respond in the following format:
     model.save_lora("grpo_saved_lora")
     model.save_pretrained_merged("model", tokenizer, save_method="merged_16bit")
     model.push_to_hub_merged(
-        "CK0607/llama3.1-8b-perplexity-rewards-250",
+        "model_name_here",
         tokenizer,
         save_method="merged_16bit",
         token=hf_token,
