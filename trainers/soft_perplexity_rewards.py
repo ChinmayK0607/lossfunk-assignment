@@ -1,5 +1,5 @@
 # grpo_train_modal_full.py  ──────────────────────────────────────────────
-# GRPO with *soft* similarity reward (no numeric-answer checks).
+# GRPO with *soft* perplexity reward (no numeric-answer checks).
 
 import os, re, modal, torch
 from modal import Secret
